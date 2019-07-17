@@ -7,7 +7,7 @@ const Styles = styled.div`
   .jumbotron {
     background: url(${'./img/banner2.jpg'}) no-repeat fixed;
     background-size: cover;
-    color: #ccc;
+    color: #efefef;
     height: 200px;
     position: relative;
     z-index: -2;

@@ -14,10 +14,10 @@ import NavigationBar from './NavigationBar';
 const App = () => {
   return (
     <React.Fragment>
-      <NavigationBar />
       <Header />
       <Layout>
         <Router>
+          <NavigationBar />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
