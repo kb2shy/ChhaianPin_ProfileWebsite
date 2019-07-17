@@ -1,12 +1,17 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
+// import Container from 'react-bootstrap/Container';
+// import Image from 'react-bootstrap/Image';
 
-// import Header from './Header';
+import Header from './Header';
+import Navbar from './Navbar';
 
 const App = () => {
   return (
-    <Image src="img/banner2.jpg" fluid />
+    <React.Fragment>
+      <Navbar />
+      <Header />
+
+    </React.Fragment>
   )
 }
 
