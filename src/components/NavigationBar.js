@@ -6,11 +6,10 @@ import styled from 'styled-components';
 
 const Styles = styled.div`
   .navbar {
-    background-color: #000;
     width: 100%;
   }
 
-  .navbar-brand, .nav-item, a {
+  .navbar-brand, .nav-item, a{
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -26,7 +25,7 @@ const NavbarComponent = () => {
     <Styles>
       <Navbar justify fixed="top">
         <Navbar.Brand><Link to='/'>Hire Chhaian</Link></Navbar.Brand>
-        <Nav>
+        <Nav className="ml-auto">
           <Nav.Item><Link to="/about">About Me</Link></Nav.Item>
           <Nav.Item><Link to="/resume">Résumé</Link></Nav.Item>
           <Nav.Item><Link to="/portfolio">Portfolio</Link></Nav.Item>
