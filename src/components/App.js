@@ -15,6 +15,7 @@ const App = () => {
   return (
     <React.Fragment>
       <NavigationBar />
+      <Header />
       <Layout>
         <Router>
           <Switch>
