@@ -31,7 +31,7 @@ const Header = () => {
       <Jumbotron fluid className="jumbo">
         <div className="overlay"></div>
         <Container>
-          <h1>Welcome</h1>
+          <h1>Chhaian Pin</h1>
           <p>Front End Engineer | React Developer | Full Stack Developer</p>
         </Container>
       </Jumbotron>

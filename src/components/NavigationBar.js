@@ -24,7 +24,7 @@ const NavbarComponent = () => {
   return (
     <Styles>
       <Navbar justify fixed="top">
-        <Navbar.Brand><Link to='/'>Hire Chhaian</Link></Navbar.Brand>
+        <Navbar.Brand><Link to='/'>Home</Link></Navbar.Brand>
         <Nav className="ml-auto">
           <Nav.Item><Link to="/about">About Me</Link></Nav.Item>
           <Nav.Item><Link to="/resume">Résumé</Link></Nav.Item>
