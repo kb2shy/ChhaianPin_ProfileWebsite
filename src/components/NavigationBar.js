@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
@@ -9,7 +10,7 @@ const Styles = styled.div`
     width: 100%;
   }
 
-  .navbar-brand, .nav-item, a{
+  button, a{
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -18,21 +19,31 @@ const Styles = styled.div`
       color: gray;
     }
   }
+
+  .navbar-toggler {
+    background-color: white;
+    opacity: 0.5;
+  }
 `;
 
 const NavbarComponent = () => {
   return (
+    <Container>
     <Styles>
-      <Navbar justify fixed="top">
+      <Navbar justify fixed="top" expand="sm">
         <Navbar.Brand><Link to='/'>Home</Link></Navbar.Brand>
-        <Nav className="ml-auto">
-          <Nav.Item><Link to="/about">About Me</Link></Nav.Item>
-          <Nav.Item><Link to="/resume">Résumé</Link></Nav.Item>
-          <Nav.Item><Link to="/portfolio">Portfolio</Link></Nav.Item>
-          <Nav.Item><Link to="/contact">Contact Me</Link></Nav.Item>
-        </Nav>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto">
+            <Nav.Item><Link to="/about">About Me</Link></Nav.Item>
+            <Nav.Item><Link to="/resume">Résumé</Link></Nav.Item>
+            <Nav.Item><Link to="/portfolio">Portfolio</Link></Nav.Item>
+            <Nav.Item><Link to="/contact">Contact Me</Link></Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     </Styles>
+    </Container>
   )
 }
 
