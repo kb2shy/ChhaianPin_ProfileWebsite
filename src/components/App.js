@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
 
-import NavigationBar from './NavigationBar';
+import DesktopNavigationBar from './DesktopNavigationBar';
+import MobileNavigationBar from './MobileNavigationBar';
 
-const PAGES = ["HOME", "ABOUT", "RÉSUMÉ", "PROJECTS", "CONTACT ME"]
+const PAGES = ["HOME", "ABOUT ME", "RÉSUMÉ", "PROJECTS", "CONTACT ME"]
 
 class App extends Component {
   state = {
-    page: 'HOME',
+    width: window.innerWidth,
+    page: '',
+  }
+
+  handlePageChange = (page) => {
+    this.setState({ page });
   }
 
   render() {
+    const { page } = this.state;
+
     return(
       <div>
-        <NavigationBar page={this.state.page} menuItems={PAGES}/>
+        {this.state.width < 400 ?
+          <MobileNavigationBar pages={PAGES}/> :
+          <DesktopNavigationBar page={page} pages={PAGES}/>
+        }
       </div>
     )
   }

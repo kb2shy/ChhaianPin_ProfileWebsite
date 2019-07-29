@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-class NavigationBar extends Component {
+class MobileNavigationBar extends Component {
 
   render() {
     const { page, menuItems } = this.props;
@@ -25,4 +25,4 @@ class NavigationBar extends Component {
   }
 }
 
-export default NavigationBar;
+export default MobileNavigationBar;

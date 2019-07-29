@@ -6,7 +6,7 @@ import Container from '@material-ui/core/Container';
 const DesktopContainer = () => {
   return (
     <Container>
-      <h1>DesktopContainer</h1>
+      {this.props.children}
     </Container>
   )
 }
