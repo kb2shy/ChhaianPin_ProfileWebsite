@@ -1,50 +1,28 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React, { Component } from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
-const Styles = styled.div`
-  .navbar {
-    width: 100%;
+class NavigationBar extends Component {
+
+  render() {
+    const { page, menuItems } = this.props;
+    return(
+      <AppBar position='static'>
+        <Toolbar>
+          <IconButton edge='start' aria-label='menu' onClick={() => console.log("menu item button clicked")}>
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" >
+            {page}
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    )
   }
-
-  button, a{
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-
-    &:hover {
-      color: gray;
-    }
-  }
-
-  .navbar-toggler {
-    background-color: white;
-    opacity: 0.5;
-  }
-`;
-
-const NavbarComponent = () => {
-  return (
-    <Container>
-    <Styles>
-      <Navbar justify fixed="top" expand="sm">
-        <Navbar.Brand><Link to='/'>Home</Link></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Item><Link to="/about">About Me</Link></Nav.Item>
-            <Nav.Item><Link to="/resume">Résumé</Link></Nav.Item>
-            <Nav.Item><Link to="/portfolio">Portfolio</Link></Nav.Item>
-            <Nav.Item><Link to="/contact">Contact Me</Link></Nav.Item>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </Styles>
-    </Container>
-  )
 }
 
-export default NavbarComponent;
+export default NavigationBar;
