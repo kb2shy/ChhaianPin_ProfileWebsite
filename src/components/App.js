@@ -8,11 +8,12 @@ const PAGES = ["HOME", "ABOUT ME", "RÉSUMÉ", "PROJECTS", "CONTACT ME"]
 class App extends Component {
   state = {
     width: window.innerWidth,
-    page: '',
+    page: 'HOME',
   }
 
   handlePageChange = (page) => {
-    this.setState({ page });
+    console.log("handlePageChange triggered")
+    this.setState({ ...this.state, page });
   }
 
   render() {
@@ -21,8 +22,16 @@ class App extends Component {
     return(
       <div>
         {this.state.width < 400 ?
-          <MobileNavigationBar pages={PAGES}/> :
-          <DesktopNavigationBar page={page} pages={PAGES}/>
+          <MobileNavigationBar
+            page={page}
+            pages={PAGES}
+            handlePageChange={this.handlePageChange}
+          /> :
+          <DesktopNavigationBar
+            page={page}
+            pages={PAGES}
+            handlePageChange={this.handlePageChange}
+          />
         }
       </div>
     )

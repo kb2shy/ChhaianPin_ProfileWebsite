@@ -5,16 +5,44 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 class MobileNavigationBar extends Component {
+  state = {
+    open: false,
+  }
+
+  handleToggleMenu = () => {
+    this.setState({ open: !this.state.open })
+  }
+
+  handleSelect = (page) => {
+    this.props.handlePageChange(page);
+    this.handleToggleMenu();
+  }
 
   render() {
-    const { page, menuItems } = this.props;
+    const { page, pages, handlePageChange } = this.props;
     return(
       <AppBar position='static'>
         <Toolbar>
-          <IconButton edge='start' aria-label='menu' onClick={() => console.log("menu item button clicked")}>
+          <IconButton
+            edge='start'
+            aria-label='menu'
+            onClick={() => this.handleToggleMenu()}
+          >
             <MenuIcon />
+            <Menu
+              anchorEl={page}
+              open={this.state.open}
+              onClose={() => this.handleToggleMenu()}
+              keepMounted
+            >
+              {pages.map((p, k) =>
+                <MenuItem key={k} onClick={() => this.handleSelect}>{p}</MenuItem>)
+              }
+            </Menu>
           </IconButton>
           <Typography variant="h6" >
             {page}
