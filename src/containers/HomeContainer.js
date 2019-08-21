@@ -1,13 +1,27 @@
 import React from 'react';
-import Box from '@material-ui/core/Box';
+import { withStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 import Home from '../components/Home';
 
-const HomeContainer = () => {
+const styles = theme => ({
+  root: {
+    flexGrow: 1
+  },
+  paper: {
+    height: '100%',
+    width: '100%',
+  }
+})
+
+const HomeContainer = withStyles(styles)(({ classes }) => {
   return (
-    <Box>
-      <Home />
-    </Box>
+    <Grid>
+      <Paper className={classes.paper}>
+        <Home />
+      </Paper>
+    </Grid>
   )
-}
+})
 
 export default HomeContainer;
