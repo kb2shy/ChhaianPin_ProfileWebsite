@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
@@ -23,7 +22,7 @@ class MobileNavigationBar extends Component {
   }
 
   render() {
-    const { page, pages, handlePageChange } = this.props;
+    const { page, pages } = this.props;
     return(
       <AppBar position='static'>
         <Toolbar>
