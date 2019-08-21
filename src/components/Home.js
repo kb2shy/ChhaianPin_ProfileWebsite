@@ -2,21 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import SkillCard from './SkillCard';
-
-const SKILLS = [
-  {
-    skill: "JavaScript",
-    rating: 4,
-  },
-  {
-    skill: "Ruby",
-    rating: 4,
-  },
-  {
-    skill: "Java",
-    rating: 2,
-  }
-]
+import skills from '../content/skills';
 
 const styles = theme => ({
   root: {
@@ -57,7 +43,7 @@ const Home = withStyles(styles)(({ classes }) => {
         Technical Skills
       </Typography>
       {
-        SKILLS.map((skill, key) => <SkillCard skill={skill} key={key} />)
+        skills.map((skill, key) => <SkillCard skill={skill} key={key} />)
       }
 
     </div>
