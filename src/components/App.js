@@ -6,16 +6,18 @@ import Home from './Home';
 import Education from './Education';
 
 
+
 // const PAGES = ["HOME", "ABOUT ME", "RÉSUMÉ", "PROJECTS", "CONTACT ME"];
 
 const styles = theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   flex: {
     flex: 1
   },
-  toolbarMargin: theme.mixins.toolbar
+  toolbarMargin: theme.mixins.toolbar,
+
 })
 
 const App = withStyles(styles)(({ classes}) => {
@@ -23,7 +25,6 @@ const App = withStyles(styles)(({ classes}) => {
   return (
     <div className={classes.root}>
       <TopMenu />
-      <div className={classes.toolbarMargin} />
       <Home />
       <Education />
     </div>

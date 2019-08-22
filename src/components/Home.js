@@ -1,8 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 
 const styles = theme => ({
   root: {
@@ -14,8 +12,11 @@ const styles = theme => ({
     margin: 0,
     color: 'secondary'
   },
+  mainImage: {
+    width: '100%'
+  },
   image: {
-    maxWidth: 150
+    maxHeight: 100
   },
 
 })
@@ -23,7 +24,7 @@ const styles = theme => ({
 const Home = withStyles(styles)(({ classes }) => {
   return (
     <div className={classes.root}>
-
+      <img src="./img/banner2.jpg" className={classes.mainImage} alt="keyboard"></img>
       <Typography
         variant="h4"
         align="center"
