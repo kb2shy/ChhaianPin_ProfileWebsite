@@ -2,7 +2,9 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
 import TopMenu from './TopMenu';
-import HomeContainer from '../containers/HomeContainer';
+import Home from './Home';
+import Education from './Education';
+
 
 // const PAGES = ["HOME", "ABOUT ME", "RÉSUMÉ", "PROJECTS", "CONTACT ME"];
 
@@ -22,7 +24,8 @@ const App = withStyles(styles)(({ classes}) => {
     <div className={classes.root}>
       <TopMenu />
       <div className={classes.toolbarMargin} />
-      <HomeContainer />
+      <Home />
+      <Education />
     </div>
   ) 
 })
