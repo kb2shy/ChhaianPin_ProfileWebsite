@@ -2,14 +2,12 @@ import React from 'react';
 import skills from '../content/skills';
 import { withStyles, Typography, Grid } from '@material-ui/core';
 import SkillCard from './SkillCard';
-import color from '@material-ui/core/colors/teal';
 
 const styles = theme => ({
   root: {
-    backgroundColor: 'black'
   },
   grid: {
-    height: 100,
+    height: '100%',
   }
 
 })

@@ -5,15 +5,25 @@ const skills = [
     rating: 4,
   },
   {
-    icon: 'ruby-24.png',
+    icon: 'ruby-50.png',
     skill: "Ruby",
     rating: 4,
   },
   {
-    icon: 'java-26.png',
+    icon: 'java-50.png',
     skill: "Java",
     rating: 2,
-  }
+  },
+  {
+    icon: 'nodejs.png',
+    skill: "Node JS",
+    rating: 3
+  },
+  {
+    icon: 'react-50.png',
+    skill: "React JS",
+    rating: 4
+  },
 ]
 
 export default skills;
