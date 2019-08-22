@@ -28,9 +28,14 @@ const HomeContainer = withStyles(styles)(({ classes }) => {
           <Home />
         </Container>
       </Grid>
-      <Grid xs={6} sm={4}>
-        <TechnicalSkills />
-      </Grid>
+      <Container>
+        <Grid xs={6} sm={4}>
+          <Paper>
+            <TechnicalSkills />
+          </Paper>
+        </Grid>
+      </Container>
+      
     </div>
 
   )
