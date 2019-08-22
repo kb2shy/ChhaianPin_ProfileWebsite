@@ -23,13 +23,13 @@ const HomeContainer = withStyles(styles)(({ classes }) => {
   return (
     <div>
       <Grid>
-        <img src="/img/banner2.jpg" className={classes.image}></img>
+        <img src="/img/banner2.jpg" className={classes.image} alt="pc keyboard"></img>
         <Container className={classes.paper}>
           <Home />
         </Container>
       </Grid>
       <Container>
-        <Grid xs={6} sm={4}>
+        <Grid>
           <Paper>
             <TechnicalSkills />
           </Paper>
