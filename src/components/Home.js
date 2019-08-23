@@ -28,7 +28,7 @@ const Home = withStyles(styles)(({ classes }) => {
   return (
     <div className={classes.root}>
       <Grid container>
-        <Grid item xs={12} justify="space-around">
+        <Grid item xs={12}>
           <img src="./img/banner2.jpg" className={classes.mainImage} alt="keyboard"></img>
         </Grid>
         <Grid item xs={12}>

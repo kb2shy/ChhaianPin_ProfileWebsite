@@ -7,24 +7,24 @@ import Paper from '@material-ui/core/Paper';
 
 const styles = theme => ({
   root: {
+    flexGrow: 1
   },
-  icon: {
-    width: '100%',
-    paddingRight: 5,
-    marginRight: 5
+  paper: {
+    height: 88,
+    padding: theme.spacing(1)
   }
 })
 
 const SkillCard = withStyles(styles)(({ classes, skill }) => {
   return (
-    <Grid item xs={6} sm={4}>
-      <Paper className={classes.root}>
+    <Grid item xs={6} sm={3} className={classes.root}>
+      <Paper className={classes.paper}>
         <Grid container justify="space-around" alignItems="center">
           <Grid item xs={3} className={classes.icon} >
             <img src={`icons/${skill.icon}`} alt={skill.skill}></img>
           </Grid>
           <Grid item xs={7}>
-            <Typography variant="h6">
+            <Typography variant="body1" align="center">
               {skill.skill}
             </Typography>
             <Rating value={skill.rating} readOnly />

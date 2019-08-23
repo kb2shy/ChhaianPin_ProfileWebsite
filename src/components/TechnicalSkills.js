@@ -5,12 +5,8 @@ import SkillCard from './SkillCard';
 
 const styles = theme => ({
   root: {
-    
-  },
-  grid: {
-    height: '100%',
+    flexGrow: 1
   }
-
 })
 
 const TechnicalSkills = withStyles(styles)(({ classes }) => {
@@ -19,7 +15,7 @@ const TechnicalSkills = withStyles(styles)(({ classes }) => {
       <Typography variant="h4" align="center" gutterBottom>
         Technical Skills
       </Typography>
-      <Grid container className={classes.grid} spacing={2}>
+      <Grid container className={classes.grid} spacing={1}>
         {
           skills.map((skill, key) => <SkillCard skill={skill} key={key} />)
         }
