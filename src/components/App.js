@@ -24,6 +24,7 @@ const App = withStyles(styles)(({ classes}) => {
   return (
     <div className={classes.root}>
       <TopMenu />
+      <div className={classes.toolbarMargin}></div>
       <Home />
       <Education />
       <TechnicalSkills />
