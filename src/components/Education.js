@@ -5,16 +5,20 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
-  paper: {
-    padding: theme.spacing(1),
+  root: {
+    flexGrow: 1,
+    marginBottom: 10
+  },
+  box: {
+    marginRight: 10
   }
 })
 
 const Education = withStyles(styles)(({ classes }) => {
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} className={classes.root} alignItems="flex-end">
       <Grid item xs={12} sm={6}>
-        <Box className={classes.paper}>
+        <Box className={classes.box}>
           <Typography variant="body1" align="center">
             <a href="https://flatironschool.com/" target="_blank" rel="noopener noreferrer" >
               <img src="/img/flatironschool.png" alt="flatiron school logo" />
@@ -36,7 +40,7 @@ const Education = withStyles(styles)(({ classes }) => {
       </Grid>
       
       <Grid item xs={12} sm={6}>
-        <Box className={classes.paper}>
+        <Box className={classes.box}>
           <Typography variant="body1" align="center">
             <a href="https://www.washington.edu/" target="_blank" rel="noopener noreferrer">
               <img src="/img/uw2.gif" alt="university of washington logo" />

@@ -7,10 +7,11 @@ import Paper from '@material-ui/core/Paper';
 
 const styles = theme => ({
   root: {
-    margin: 5,
   },
   icon: {
-    width: '100%'
+    width: '100%',
+    paddingRight: 5,
+    marginRight: 5
   }
 })
 
@@ -18,11 +19,11 @@ const SkillCard = withStyles(styles)(({ classes, skill }) => {
   return (
     <Grid item xs={6} sm={4}>
       <Paper className={classes.root}>
-        <Grid container>
-          <Grid item xs={4} className={classes.icon}>
+        <Grid container justify="space-around" alignItems="center">
+          <Grid item xs={3} className={classes.icon} >
             <img src={`icons/${skill.icon}`} alt={skill.skill}></img>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={7}>
             <Typography variant="h6">
               {skill.skill}
             </Typography>

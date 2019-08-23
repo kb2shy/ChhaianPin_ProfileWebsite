@@ -5,6 +5,7 @@ import SkillCard from './SkillCard';
 
 const styles = theme => ({
   root: {
+    
   },
   grid: {
     height: '100%',
@@ -15,7 +16,7 @@ const styles = theme => ({
 const TechnicalSkills = withStyles(styles)(({ classes }) => {
   return (
     <div className={classes.root}>
-      <Typography variant="h4" align="center">
+      <Typography variant="h4" align="center" gutterBottom>
         Technical Skills
       </Typography>
       <Grid container className={classes.grid} spacing={2}>

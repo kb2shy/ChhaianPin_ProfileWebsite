@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
@@ -13,6 +14,8 @@ const styles = theme => ({
     color: 'secondary'
   },
   mainImage: {
+    margin: 0,
+    padding: 0,
     width: '100%'
   },
   image: {
@@ -24,11 +27,21 @@ const styles = theme => ({
 const Home = withStyles(styles)(({ classes }) => {
   return (
     <div className={classes.root}>
-      <img src="./img/banner2.jpg" className={classes.mainImage} alt="keyboard"></img>
+      <Grid container>
+        <Grid item xs={12} justify="space-around">
+          <img src="./img/banner2.jpg" className={classes.mainImage} alt="keyboard"></img>
+        </Grid>
+        <Grid item xs={12}>
+
+        </Grid>
+      </Grid>
+
+      
       <Typography
         variant="h4"
         align="center"
         className={classes.typography}
+        gutterBottom
       >
         Welcome
       </Typography>
@@ -45,7 +58,7 @@ const Home = withStyles(styles)(({ classes }) => {
         I have experience designing and developing responsive web applications, content, and features. I am proficient in JavaScript, Node.js, React.js, web technologies, and RESTful APIs. I am always looking to improve my skills as a web developer, learn new programming languages, and test out new technologies.
       </Typography>
       <br />
-      <Typography variant="h4" align="center">
+      <Typography variant="h4" align="center" gutterBottom>
         Back Story
       </Typography>
       <Typography variant="body1" align="center">
