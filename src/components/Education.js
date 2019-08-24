@@ -15,8 +15,9 @@ const styles = theme => ({
   box: {
     marginRight: 10
   },
-  img: {
-    width: '100%'
+  image: {
+    height: 150,
+    
   }
 })
 
@@ -29,9 +30,9 @@ const Education = withStyles(styles)(({ classes }) => {
       <Grid container direction="row" justify="center" spacing={1}>
         <Grid item xs={12} sm={6}>
           <Grid container direction="column" alignItems="center">
-            <Grid item>
+            <Grid item className={classes.image}>
               <a href="https://flatironschool.com/" target="_blank"  rel="noopener noreferrer" >
-              <img src="/img/flatironschool.jpg" alt="flatiron school logo" className={classes.img}/>
+              <img src="/img/flatironschool.jpg" alt="flatiron school logo"/>
               </a>
             </Grid>
             <br />
@@ -60,7 +61,7 @@ const Education = withStyles(styles)(({ classes }) => {
 
         <Grid item xs={12} sm={6}>
           <Grid container direction="column" alignItems="center">
-            <Grid item>
+            <Grid item className={classes.image}>
               <a href="https://www.washington.edu/" target="_blank" rel="noopener noreferrer">
                 <img src="/img/uw2.png" alt="university of washington logo" />
               </a>
