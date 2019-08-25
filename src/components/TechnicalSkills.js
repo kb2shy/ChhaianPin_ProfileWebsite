@@ -5,7 +5,9 @@ import SkillCard from './SkillCard';
 
 const styles = theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+    marginLeft: 30,
+    marginRight: 30
   }
 })
 

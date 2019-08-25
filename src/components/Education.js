@@ -69,7 +69,7 @@ const Education = withStyles(styles)(({ classes }) => {
             <br />
             <Grid item>
               <Typography variant="body1" align="center">
-                Location: <a href="https://www.google.com/maps/place/1411+4th+Ave,+Seattle,+WA+98101/@47.6092823,-122.3385627,17z/data=!3m1!4b1!4m5!3m4!1s0x54906ab38338e227:0x96ab350fef4c3d47!8m2!3d47.6092787!4d-122.336374" target="_blank" rel="noopener noreferrer">Seattle, Washington</a>
+                Location: <a href="https://www.google.com/maps/place/University+of+Washington/@47.6553387,-122.3057139,17z/data=!3m1!4b1!4m5!3m4!1s0x549014929d8535eb:0x6b742c7901b82ba3!8m2!3d47.6553351!4d-122.3035199" target="_blank" rel="noopener noreferrer">Seattle, Washington</a>
                 <br />
                 Degree: Bachelor of Arts in Law, Society, and Justice
               </Typography>
