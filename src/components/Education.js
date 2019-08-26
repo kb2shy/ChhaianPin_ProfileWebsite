@@ -15,7 +15,6 @@ const styles = theme => ({
   },
   image: {
     height: 150,
-    
   }
 })
 
@@ -45,8 +44,11 @@ const Education = withStyles(styles)(({ classes }) => {
                 Graduated: May, 2019
               </Typography>
               <br />
+              <Typography variant="h6" align="center">
+                Areas of Study:
+              </Typography>
               <Typography variant="subtitle2" align="center">
-                <h6>Areas of Study:</h6>
+                
                 <List>
                   <ListItem>Web Development in Ruby/Ruby on Rails, JavaScript, and React</ListItem>
                   <ListItem>RESTful API testing and development</ListItem>
@@ -76,8 +78,10 @@ const Education = withStyles(styles)(({ classes }) => {
                 Graduated: December, 2004
               </Typography>
               <br />
+              <Typography variant="h6" align="center">
+                Areas of Study:
+              </Typography>
               <Typography variant="subtitle2" align="center">
-                <h6>Areas of Study:</h6>
                 <List>
                   <ListItem>Comparison and analysis of Criminal Justice Systems in the world</ListItem>
                   <ListItem>Social, political, and historical study of Human Rights movements</ListItem>

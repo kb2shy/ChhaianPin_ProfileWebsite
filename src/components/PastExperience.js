@@ -22,7 +22,7 @@ const PastExperience = withStyles(styles)(({ classes }) => {
           Portfolio
         </Typography>
         <Paper className={classes.paper}>
-          <img></img>
+          <img alt="something"></img>
         </Paper>
       </Container>
     </div>
