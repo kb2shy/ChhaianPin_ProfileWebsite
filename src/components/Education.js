@@ -8,9 +8,7 @@ import ListItem from '@material-ui/core/ListItem';
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    marginBottom: 10,
-    marginLeft: 30,
-    marginRight: 30
+    padding: '10px 20px',
   },
   box: {
     marginRight: 10
