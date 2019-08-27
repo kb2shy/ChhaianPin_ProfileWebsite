@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import Typography from '@material-ui/core/Typography';
@@ -17,7 +18,17 @@ const styles = theme => ({
   }
 })
 
-const PastExperience = withStyles(styles)(({ classes }) => {
+const PastExperience = withStyles(styles)(({ classes, width }) => {
+  const getGridListCols = () => {
+    if (isWidthUp('sm', width)) {
+      return 4;
+    }
+
+    if (isWidthUp('xs', width)) {
+      return 2;
+    }
+  }
+
   return (
     <div className={classes.root}>
       <Typography variant="h4" align="center">
@@ -38,7 +49,7 @@ const PastExperience = withStyles(styles)(({ classes }) => {
       <Typography variant="body1" align="center">
 
       </Typography>
-      <GridList cellHeight={150} className={classes.gridList} cols={4}>
+      <GridList cellHeight={150} className={classes.gridList} cols={getGridListCols()}>
         <GridListTile>
           <img src="https://via.placeholder.com/150" alt="something"></img>
         </GridListTile>
@@ -68,7 +79,7 @@ const PastExperience = withStyles(styles)(({ classes }) => {
       <Typography variant="body1" align="center">
 
       </Typography>
-      <GridList cellHeight={150} className={classes.gridList} cols={4}>
+      <GridList cellHeight={150} className={classes.gridList} cols={getGridListCols()}>
         <GridListTile>
           <img src="https://via.placeholder.com/150" alt="something"></img>
         </GridListTile>
@@ -87,4 +98,4 @@ const PastExperience = withStyles(styles)(({ classes }) => {
   )
 })
 
-export default PastExperience;
+export default withWidth()(PastExperience);
