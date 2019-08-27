@@ -44,13 +44,13 @@ const TechnicalSkills = withStyles(styles)(({ classes }) => {
 
   return (
     <div className={classes.root}>
-      <Grid container xs={12} alignItems="center" direction="column">
-        <Grid item>
+      <Grid container alignItems="center" direction="column">
+        <Grid item xs={12}>
           <Typography variant="h4">
             Technical Skills
           </Typography>
         </Grid>
-        <Grid item>
+        <Grid item xs={12} sm={6}>
           <FormGroup row>
             <FormControlLabel control={<Switch checked={onSort} onChange={handleChangeOnSort} />}
               label="Sort By Skill Name">
@@ -60,7 +60,7 @@ const TechnicalSkills = withStyles(styles)(({ classes }) => {
             </FormControlLabel>
           </FormGroup>
         </Grid>
-        <Grid item>
+        <Grid item xs={12}>
           <Grid container className={classes.grid} spacing={1}>
             {
               skillsContent.map((skill, key) => <SkillCard skill={skill} key={key} />)
