@@ -41,25 +41,32 @@ const TechnicalSkills = withStyles(styles)(({ classes }) => {
     setSkillsContent(result);
     setOnSort(false);
   }
-  
+
   return (
     <div className={classes.root}>
-      <Typography variant="h4" align="center" gutterBottom>
-        Technical Skills
-      </Typography>
-      <FormGroup row>
-        <FormControlLabel control={<Switch checked={onSort} onChange={handleChangeOnSort}/>}
-        label="Sort By Skill Name">
-        </FormControlLabel>
-        <FormControlLabel control={<Switch checked={onStars} onChange={handleChangeOnStars}/>}
-        label="Sort By Star Rating">
-        </FormControlLabel>
-      </FormGroup>
-      
-      <Grid container className={classes.grid} spacing={1}>
-        {
-          skillsContent.map((skill, key) => <SkillCard skill={skill} key={key} />)
-        }
+      <Grid container xs={12} alignItems="center" direction="column">
+        <Grid item>
+          <Typography variant="h4">
+            Technical Skills
+          </Typography>
+        </Grid>
+        <Grid item>
+          <FormGroup row>
+            <FormControlLabel control={<Switch checked={onSort} onChange={handleChangeOnSort} />}
+              label="Sort By Skill Name">
+            </FormControlLabel>
+            <FormControlLabel control={<Switch checked={onStars} onChange={handleChangeOnStars} />}
+              label="Sort By Star Rating">
+            </FormControlLabel>
+          </FormGroup>
+        </Grid>
+        <Grid item>
+          <Grid container className={classes.grid} spacing={1}>
+            {
+              skillsContent.map((skill, key) => <SkillCard skill={skill} key={key} />)
+            }
+          </Grid>
+        </Grid>
       </Grid>
     </div>
   )
