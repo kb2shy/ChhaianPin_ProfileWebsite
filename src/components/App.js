@@ -6,8 +6,7 @@ import Home from './Home';
 import Education from './Education';
 import TechnicalSkills from './TechnicalSkills';
 import Portfolio from './Portfolio';
-
-// const PAGES = ["HOME", "ABOUT ME", "RÉSUMÉ", "PROJECTS", "CONTACT ME"];
+import ContactMe from './ContactMe';
 
 const styles = theme => ({
   root: {
@@ -30,6 +29,7 @@ const App = withStyles(styles)(({ classes}) => {
       <Education />
       <TechnicalSkills />
       <Portfolio />
+      <ContactMe />
     </div>
   ) 
 })
