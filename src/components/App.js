@@ -5,7 +5,7 @@ import TopMenu from './TopMenu';
 import Home from './Home';
 import Education from './Education';
 import TechnicalSkills from './TechnicalSkills';
-import PastExperience from './PastExperience';
+import Portfolio from './Portfolio';
 
 // const PAGES = ["HOME", "ABOUT ME", "RÉSUMÉ", "PROJECTS", "CONTACT ME"];
 
@@ -29,7 +29,7 @@ const App = withStyles(styles)(({ classes}) => {
       <Home />
       <Education />
       <TechnicalSkills />
-      <PastExperience />
+      <Portfolio />
     </div>
   ) 
 })
