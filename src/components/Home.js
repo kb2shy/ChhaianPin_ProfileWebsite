@@ -51,7 +51,7 @@ const Home = withStyles(styles)(({ classes }) => {
               Hello! Welcome to my webpage. My name is Chhaian and it's pronounced 'Cheyenne', like the city in <a href="https://www.google.com/maps/place/Cheyenne,+WY/@41.1477062,-104.9074876,11z/data=!3m1!4b1!4m5!3m4!1s0x876f38762e73ef93:0xb10a30418f972d2b!8m2!3d41.1399814!4d-104.8202462" target="_blank" rel="noopener noreferrer">Cheyenne, Wyoming</a> and like the <a href="https://en.wikipedia.org/wiki/Cheyenne">Native American Tribe</a>. I am neither from Cheyenne, Wyoming nor am I a Native American.
               <br />
               <br />
-              <strong>I am a Full Stack Web Developer and Software Engineer and I am available for hire.</strong>
+              <strong>I am a Full Stack Web Developer and Software Engineer and I am seeking Front-End, Back-End, or Full Stack Web Development opportunities in the Greater Seattle Area. I am also open to opportunities in either the San Francisco Bay Area or San Diego, California.</strong>
               <br />
               <br />
               I have experience designing and developing responsive web applications, content, and features. I am proficient in JavaScript, Node.js, React.js, web technologies, and RESTful APIs. I am always looking to improve my skills as a web developer, learn new programming languages, and test out new technologies.

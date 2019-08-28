@@ -13,11 +13,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
-// import Home from './Home';
-// import Education from './Education';
-// import TechnicalSkills from './TechnicalSkills';
-// import ContactMe from './ContactMe';
-
 const styles = theme => ({
   root: {
     flexGrow: 1
@@ -47,7 +42,7 @@ const TopMenu = withStyles(styles)(({ classes, width, getRef }) => {
   const menu = () => {
     if (isWidthUp('sm', width)) {
       return (
-        <Tabs aria-label="menu tabs" fullWidth={false}>
+        <Tabs aria-label="menu tabs">
           <Link
             activeClass="active"
             to="home"
@@ -56,7 +51,7 @@ const TopMenu = withStyles(styles)(({ classes, width, getRef }) => {
             offset={-70}
             duration={500}
           >
-            <Tab label="Home"/>
+            <Tab label="Home" key={0} />
           </Link>
           
           <Link
@@ -67,7 +62,7 @@ const TopMenu = withStyles(styles)(({ classes, width, getRef }) => {
             offset={-70}
             duration={500}
           >
-            <Tab label="Education"/>
+            <Tab label="Education" key={1}/>
           </Link>
           
           <Link
@@ -78,7 +73,7 @@ const TopMenu = withStyles(styles)(({ classes, width, getRef }) => {
             offset={-70}
             duration={500}
           >
-            <Tab label="Technical Skills"/>
+            <Tab label="Technical Skills" key={2}/>
           </Link>
           
           <Link
@@ -89,7 +84,7 @@ const TopMenu = withStyles(styles)(({ classes, width, getRef }) => {
             offset={-70}
             duration={500}
           >
-            <Tab label="Portfolio"/>
+            <Tab label="Portfolio" key={3}/>
           </Link>
 
           <Link
@@ -100,7 +95,7 @@ const TopMenu = withStyles(styles)(({ classes, width, getRef }) => {
             offset={-70}
             duration={500}
           >
-            <Tab label="Contact Me"/>
+            <Tab label="Contact Me" key={4}/>
           </Link>
         </Tabs>
       )
