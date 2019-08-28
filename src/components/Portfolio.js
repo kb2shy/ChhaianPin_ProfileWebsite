@@ -46,13 +46,15 @@ const PastExperience = withStyles(styles)(({ openImage, classes, width }) => {
       </Typography>
       <Typography variant="body1" align="center" className={classes.typography}>
         Tourney TV was the final project that I developed solo while attending Flatiron School. I wanted to build a volleyball tournament management system that allowed users to register for a tournament, update their profiles, and keep track of game scores. While I was building this project, I learned how to incorporate websocket technology utilizing Ruby on Rails' ActionCable and styling React components with Semantic-UI. I had roughly three weeks to build my project and discovered that the scope kept increasing with new developments. Within the time frame, I was able to:
-        <ul style={{listStyleType: 'none'}}>
-          <li>♦ Build a back-end server with Ruby on Rails and persist data with PostgreSQL.</li>
-          <li>♦ Develop an authentication system using JSON web tokens.</li>
-          <li>♦ Stream RESTful API data between client and server in real-time.</li>
-          <li>♦ Develop a front-end client in React and dynamically render components in a desktop browser.</li>
-        </ul>
       </Typography>
+      <div>
+        <ul style={{listStyleType: 'none'}}> 
+          <li>♦  Build a back-end server with Ruby on Rails and persist data with PostgreSQL.</li>
+          <li>♦  Develop an authentication system using JSON web tokens.</li>
+          <li>♦  Stream RESTful API data between client and server in real-time.</li>
+          <li>♦  Develop a front-end client in React and dynamically render components in a desktop browser.</li>
+        </ul>
+      </div>
       <Typography variant="h6" align="center">Key Technologies</Typography>
       <Typography variant="body1" align="center">
         ★ ReactJS ★ Semantic-UI ★ JavaScript ★ Ruby on Rails ★ PostgreSQL ★
@@ -100,12 +102,14 @@ const PastExperience = withStyles(styles)(({ openImage, classes, width }) => {
       </Typography>
       <Typography variant="body1" align="center">
         Create-A-Criminal was the first single page application that I developed on my own. My original insporation for this project was to build a form-like feature for a web application at the court house where I worked as a court clerk. The direction of my project changed when I realized that the scope of the project didn't match my skill sets at that time. During the course of this project, I learned:
-        <ul style={{listStyleType: 'none'}}>
-          <li>♦ Programming in Vanilla JavaScript for HTML DOM creation and manipulation.</li>
-          <li>♦ Testing and developing RESTful API environments and transactions.</li>
-          <li>♦ Styling HTML elements with Bootstrap 4.</li>
-        </ul>
       </Typography>
+      <div>
+        <ul style={{listStyleType: 'none'}}>
+            <li>♦  Programming in Vanilla JavaScript for HTML DOM creation and manipulation.</li>
+            <li>♦  Testing and developing RESTful API environments and transactions.</li>
+            <li>♦  Styling HTML elements with Bootstrap 4.</li>
+          </ul>
+      </div>
       <Typography variant="h6" align="center">Key Technologies</Typography>
       <Typography variant="body1" align="center">
         ★ JavaScript ★ Bootstrap ★ Ruby on Rails ★ PostgreSQL ★ HTML / CSS  ★
