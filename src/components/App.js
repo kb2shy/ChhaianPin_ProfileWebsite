@@ -1,35 +1,68 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { useState } from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal';
+import Container from '@material-ui/core/Container';
+
+import TopMenu from './TopMenu';
 import Home from './Home';
-import About from './About';
-import Resume from './Resume';
+import Education from './Education';
+import TechnicalSkills from './TechnicalSkills';
 import Portfolio from './Portfolio';
-import Contact from './Contact';
-import NoMatch from './NoMatch';
-import Layout from './Layout';
+import ContactMe from './ContactMe';
 
-import Header from './Header';
-import NavigationBar from './NavigationBar';
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  flex: {
+    flex: 1
+  },
+  toolbarMargin: theme.mixins.toolbar,
+  modal: {
+    border: '3px solid #000'
+  },
+  container: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '80%',
+  },
+  image: {
+    width: '100%'
+  }
+})
 
-const App = () => {
+const App = withStyles(styles)(({ classes }) => {
+  const [open, setOpen] = useState(false);
+  const [image, setImage] = useState('');
+
+  const openImage = (image) => {
+    setOpen(true);
+    setImage(image);
+  }
+
+  const closeImage = () => {
+    setOpen(false);
+    setImage('');
+  }
+    
   return (
-    <React.Fragment>
-      <Header />
-      <Layout>
-        <Router>
-          <NavigationBar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/resume" component={Resume} />
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/contact" component={Contact} />
-            <Route component={NoMatch} />
-          </Switch>
-        </Router>
-      </Layout>
-    </React.Fragment>
-  )
-}
+    <div className={classes.root}>
+      <TopMenu />
+      <div className={classes.toolbarMargin}></div>
+      <Modal open={open} onClose={closeImage} className={classes.modal}>
+        <Container className={classes.container}>
+          <img src={image} className={classes.image} alt={image}></img>
+        </Container>
+      </Modal>
+      <Home />
+      <Education />
+      <TechnicalSkills />
+      <Portfolio openImage={openImage}/>
+      <ContactMe />
+    </div>
+  ) 
+})
 
 export default App;
