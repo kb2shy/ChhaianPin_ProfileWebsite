@@ -51,16 +51,16 @@ const PastExperience = withStyles(styles)(({ classes, width }) => {
       </Typography>
       <GridList cellHeight={150} className={classes.gridList} cols={getGridListCols()}>
         <GridListTile>
-          <img src="https://via.placeholder.com/150" alt="something"></img>
+          <img src="/img/crime-1.png" alt="something"></img>
         </GridListTile>
         <GridListTile>
-          <img src="https://via.placeholder.com/150" alt="something"></img>
+          <img src="/img/crime-2.png" alt="something"></img>
         </GridListTile>
         <GridListTile>
-          <img src="https://via.placeholder.com/150" alt="something"></img>
+          <img src="/img/crime-3.png" alt="something"></img>
         </GridListTile>
         <GridListTile>
-          <img src="https://via.placeholder.com/150" alt="something"></img>
+          <img src="/img/crime-API.png" alt="something"></img>
         </GridListTile>
       </GridList>
       
