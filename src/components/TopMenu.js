@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { withStyles } from '@material-ui/core/styles';
 import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
@@ -35,7 +34,7 @@ const TopMenu = withStyles(styles)(({ classes, width }) => {
       return (
         <Tabs aria-label="menu tabs">
           <Tab label="Home" />
-          <Tab label="Education" />
+          <Tab label="Education" component={Link} to="/education" />
           <Tab label="Technical Skills" />
           <Tab label="Portfolio" />
           <Tab label="Contact Me" />
@@ -70,9 +69,3 @@ const TopMenu = withStyles(styles)(({ classes, width }) => {
 })
 
 export default withWidth()(TopMenu);
-
-{/* <Router>
-<Route exact path="/" component={Home} />
-<Route exact path="/education" component={Education} />
-<Route exact path="/technicalskills" component={TechnicalSkills} />
-</Router> */}
