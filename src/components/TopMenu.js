@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 
 import { withStyles } from '@material-ui/core/styles';
@@ -10,6 +10,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 // import Home from './Home';
 // import Education from './Education';
@@ -31,6 +33,17 @@ const styles = theme => ({
 });
 
 const TopMenu = withStyles(styles)(({ classes, width, getRef }) => {
+
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event) => {
+    console.log("menu clicked");
+    setAnchorEl(event.currentTarget);
+  }
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  }
   
   const menu = () => {
     if (isWidthUp('sm', width)) {
@@ -95,8 +108,24 @@ const TopMenu = withStyles(styles)(({ classes, width, getRef }) => {
     }
     if (isWidthUp('xs', width)) {
       return (
-        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+        <IconButton 
+          edge="start" 
+          className={classes.menuButton} 
+          color="inherit" 
+          aria-label="menu"
+          onClick={handleClick}
+        >
           <MenuIcon />
+          <Menu 
+            anchorEl={anchorEl} 
+            keepMounted open={Boolean(anchorEl)} 
+            onClose={handleClick}
+          >
+            <MenuItem>Home</MenuItem>
+            <MenuItem>Education</MenuItem>
+            <MenuItem onClick={handleClose}>Technical Skills</MenuItem>
+            <MenuItem onClick={handleClose}>Contact Me</MenuItem>
+          </Menu>
         </IconButton>
       )
     }
