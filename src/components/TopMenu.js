@@ -35,7 +35,7 @@ const TopMenu = withStyles(styles)(({ classes, width, getRef }) => {
   const menu = () => {
     if (isWidthUp('sm', width)) {
       return (
-        <Tabs aria-label="menu tabs">
+        <Tabs aria-label="menu tabs" fullWidth={false}>
           <Link
             activeClass="active"
             to="home"
