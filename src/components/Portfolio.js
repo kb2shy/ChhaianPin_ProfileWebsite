@@ -15,10 +15,15 @@ const styles = theme => ({
   gridList: {
     marginBottom: 20,
     paddingBottom: 10
+  },
+  tile: {
+    '&:hover': {
+      cursor: 'pointer'
+    }
   }
 })
 
-const PastExperience = withStyles(styles)(({ classes, width }) => {
+const PastExperience = withStyles(styles)(({ openImage, classes, width }) => {
   const getGridListCols = () => {
     if (isWidthUp('sm', width)) {
       return 4;
@@ -50,19 +55,19 @@ const PastExperience = withStyles(styles)(({ classes, width }) => {
 
       </Typography>
       <GridList cellHeight={150} className={classes.gridList} cols={getGridListCols()}>
-        <GridListTile>
-          <img src="/img/crime-1.png" alt="something"></img>
+        <GridListTile onClick={() => openImage("/img/tourney-1.png")} className={classes.tile}>
+          <img src="/img/tourney-1.png" alt="something"></img>
         </GridListTile>
-        <GridListTile>
-          <img src="/img/crime-2.png" alt="something"></img>
+        <GridListTile onClick={() => openImage("/img/tourney-2.png")} className={classes.tile}>
+          <img src="/img/tourney-2.png" alt="something"></img>
         </GridListTile>
-        <GridListTile>
-          <img src="/img/crime-3.png" alt="something"></img>
+        <GridListTile onClick={() => openImage("/img/tourney-3.png")} className={classes.tile}>
+          <img src="/img/tourney-3.png" alt="something"></img>
         </GridListTile>
-        <GridListTile>
-          <img src="/img/crime-API.png" alt="something"></img>
+        <GridListTile onClick={() => openImage("/img/tourney-API.png")} className={classes.tile}>
+          <img src="/img/tourney-API.png" alt="something"></img>
         </GridListTile>
-      </GridList>
+      </GridList>crime
       
       <Typography variant="h5" align="center">Create a Criminal</Typography>
       <Typography variant="subtitle1" align="center">April 2019</Typography>
@@ -80,17 +85,17 @@ const PastExperience = withStyles(styles)(({ classes, width }) => {
 
       </Typography>
       <GridList cellHeight={150} className={classes.gridList} cols={getGridListCols()}>
-        <GridListTile>
-          <img src="https://via.placeholder.com/150" alt="something"></img>
+        <GridListTile onClick={() => openImage("/img/crime-1.png")} className={classes.tile}>
+          <img src="/img/crime-1.png" alt="something"></img>
         </GridListTile>
-        <GridListTile>
-          <img src="https://via.placeholder.com/150" alt="something"></img>
+        <GridListTile onClick={() => openImage("/img/crime-2.png")} className={classes.tile}>
+          <img src="/img/crime-2.png" alt="something"></img>
         </GridListTile>
-        <GridListTile>
-          <img src="https://via.placeholder.com/150" alt="something"></img>
+        <GridListTile onClick={() => openImage("/img/crime-3.png")} className={classes.tile}>
+          <img src="/img/crime-3.png" alt="something"></img>
         </GridListTile>
-        <GridListTile>
-          <img src="https://via.placeholder.com/150" alt="something"></img>
+        <GridListTile onClick={() => openImage("/img/crime-API.png")} className={classes.tile}>
+          <img src="/img/crime-API.png" alt="something"></img>
         </GridListTile>
       </GridList>
       
