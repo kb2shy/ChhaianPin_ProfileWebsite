@@ -53,7 +53,7 @@ const App = withStyles(styles)(({ classes }) => {
       <div className={classes.toolbarMargin}></div>
       <Modal open={open} onClose={closeImage} className={classes.modal}>
         <Container className={classes.container}>
-          <img src={image} className={classes.image}></img>
+          <img src={image} className={classes.image} alt={image}></img>
         </Container>
       </Modal>
       <Home />
