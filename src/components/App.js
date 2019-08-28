@@ -34,6 +34,7 @@ const styles = theme => ({
 })
 
 const App = withStyles(styles)(({ classes }) => {
+  
   const [open, setOpen] = useState(false);
   const [image, setImage] = useState('');
 

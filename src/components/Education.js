@@ -20,7 +20,7 @@ const styles = theme => ({
 
 const Education = withStyles(styles)(({ classes }) => {
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="education">
       <Typography variant="h4" align="center">
         Education
       </Typography>

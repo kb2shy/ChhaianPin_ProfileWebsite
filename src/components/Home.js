@@ -29,7 +29,7 @@ const styles = theme => ({
 
 const Home = withStyles(styles)(({ classes }) => {
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="home">
       <Grid container>
         <Grid item xs={12}>
           <img src="./img/banner2.jpg" className={classes.mainImage} alt="keyboard"></img>

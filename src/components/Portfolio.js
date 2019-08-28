@@ -35,7 +35,7 @@ const PastExperience = withStyles(styles)(({ openImage, classes, width }) => {
   }
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="portfolio">
       <Typography variant="h4" align="center">
         Portfolio
       </Typography>
