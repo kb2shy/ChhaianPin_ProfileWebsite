@@ -1,11 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+// import IconButton from '@material-ui/core/IconButton';
+// import MenuIcon from '@material-ui/icons/Menu';
+
+import Home from './Home';
+import Education from './Education';
+import TechnicalSkills from './TechnicalSkills';
 
 const styles = theme => ({
   root: {
@@ -25,13 +32,6 @@ const TopMenu = withStyles(styles)(({ classes }) => (
   <div className={classes.root}>
     <AppBar position="fixed">
       <Toolbar>
-        <IconButton
-          className={classes.menuButton}
-          color="inherit"
-          aria-label="Menu"
-        >
-          <MenuIcon />
-        </IconButton>
         <Typography
           variant="h6"
           color="inherit"
@@ -39,9 +39,22 @@ const TopMenu = withStyles(styles)(({ classes }) => (
         >
           Chhaian's Website
         </Typography>
+        <Tabs aria-label="menu tabs">
+          <Tab label="Home" />
+          <Tab label="Education" />
+          <Tab label="Technical Skills" />
+          <Tab label="Portfolio" />
+          <Tab label="Contact Me" />
+        </Tabs>
       </Toolbar>
     </AppBar>
   </div>
 ))
 
 export default TopMenu;
+
+{/* <Router>
+<Route exact path="/" component={Home} />
+<Route exact path="/education" component={Education} />
+<Route exact path="/technicalskills" component={TechnicalSkills} />
+</Router> */}
