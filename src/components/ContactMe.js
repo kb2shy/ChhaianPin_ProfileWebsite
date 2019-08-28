@@ -13,7 +13,7 @@ const styles = theme => ({
 const ContactMe = withStyles(styles)(({classes}) => {
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="contact">
       <Container>
         <Paper>
           <Typography variant="h4" align="center">

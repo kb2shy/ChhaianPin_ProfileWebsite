@@ -34,6 +34,7 @@ const styles = theme => ({
 })
 
 const App = withStyles(styles)(({ classes }) => {
+  
   const [open, setOpen] = useState(false);
   const [image, setImage] = useState('');
 
@@ -50,7 +51,6 @@ const App = withStyles(styles)(({ classes }) => {
   return (
     <div className={classes.root}>
       <TopMenu />
-      <div className={classes.toolbarMargin}></div>
       <Modal open={open} onClose={closeImage} className={classes.modal}>
         <Container className={classes.container}>
           <img src={image} className={classes.image} alt={image}></img>
@@ -66,3 +66,4 @@ const App = withStyles(styles)(({ classes }) => {
 })
 
 export default App;
+{/* <div className={classes.toolbarMargin}></div> */}

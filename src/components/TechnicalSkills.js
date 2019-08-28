@@ -43,7 +43,7 @@ const TechnicalSkills = withStyles(styles)(({ classes }) => {
   }
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="technical">
       <Grid container alignItems="center" direction="column">
         <Grid item xs={12}>
           <Typography variant="h4">
