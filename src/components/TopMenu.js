@@ -37,7 +37,6 @@ const TopMenu = withStyles(styles)(({ classes, width, getRef }) => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
-    console.log("menu clicked");
     setAnchorEl(event.currentTarget);
   }
 
@@ -108,25 +107,90 @@ const TopMenu = withStyles(styles)(({ classes, width, getRef }) => {
     }
     if (isWidthUp('xs', width)) {
       return (
-        <IconButton 
-          edge="start" 
-          className={classes.menuButton} 
-          color="inherit" 
-          aria-label="menu"
-          onClick={handleClick}
-        >
-          <MenuIcon />
-          <Menu 
-            anchorEl={anchorEl} 
-            keepMounted open={Boolean(anchorEl)} 
-            onClose={handleClick}
+        <div>
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu"
+            onClick={handleClick}
           >
-            <MenuItem>Home</MenuItem>
-            <MenuItem>Education</MenuItem>
-            <MenuItem onClick={handleClose}>Technical Skills</MenuItem>
-            <MenuItem onClick={handleClose}>Contact Me</MenuItem>
+            <MenuIcon />
+          </IconButton>
+          <Menu
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+            variant="selectedMenu"
+          >
+            <MenuItem>
+              <Link
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={handleClose}
+              >
+                Home
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link
+                activeClass="active"
+                to="education"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={handleClose}
+              >
+                Education
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link
+                activeClass="active"
+                to="technical"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={handleClose}
+              >
+                Technical Skills
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link
+                activeClass="active"
+                to="portfolio"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={handleClose}
+              >
+                Portfolio
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={handleClose}
+              >
+                Contact Me
+              </Link>
+            </MenuItem>
           </Menu>
-        </IconButton>
+        </div>
       )
     }
   }
