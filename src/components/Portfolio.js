@@ -101,7 +101,7 @@ const PastExperience = withStyles(styles)(({ openImage, classes, width }) => {
         GitHub: <a href="https://github.com/kb2shy/SMC-View" target="_blank" rel="noopener noreferrer">Front End Repository</a> | <a href="https://github.com/kb2shy/SMC-Worksheet" target="_blank" rel="noopener noreferrer">Back End Repository</a>
       </Typography>
       <Typography variant="body1" align="center">
-        Create-A-Criminal was the first single page application that I developed on my own. My original insporation for this project was to build a form-like feature for a web application at the court house where I worked as a court clerk. The direction of my project changed when I realized that the scope of the project didn't match my skill sets at that time. During the course of this project, I learned:
+        Create-A-Criminal was the first single page application that I developed on my own while attending Flatiron School. My original goal for this project was to build a web application that would have simplified my work as a court clerk. I only had a week to build this web application and the original concept's scope was too large to complete within the time frame. I scaled back the project and focused on features that were within my skill sets. During the course of this project, I learned:
       </Typography>
       <div>
         <ul style={{listStyleType: 'none'}}>

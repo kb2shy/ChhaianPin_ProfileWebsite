@@ -23,7 +23,7 @@ const ContactMe = withStyles(styles)(({classes}) => {
             Contact Me
           </Typography>
           <Typography variant="h6" align="center">
-            Email: <a href="mailto:chhaian@gmail.com">Chhaian Pin</a><br />
+            Email: <a href="mailto:chhaian@gmail.com">chhaian@gmail.com</a><br />
           </Typography>
           <Typography variant="h6" align="center">
             <a href="https://www.linkedin.com/in/chhaianpin/" target="_blank" rel="noopener noreferrer">
