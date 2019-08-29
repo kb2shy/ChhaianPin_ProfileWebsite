@@ -64,7 +64,9 @@ const Home = withStyles(styles)(({ classes }) => {
               I used to work as a court clerk for <a href="https://www.seattle.gov/courts" target="_blank" rel="noopener noreferrer">Seattle Municipal Court</a> before I discovered my passion for software engineering and technology. Public service has been an invaluable experience where I have met many great co-workers, judges, attorneys, police officers, and other public officials. After working at the courthouse for 14 years, I realized that I couldn't grow professionally nor financially and that I needed to change careers. 
               <br/>
               <br />
-              For the last few years, I explored different career paths and opportunities. I discovered that technology and software programming was the field that I was most interested in. Not only did software engineering provide better opportunities for personal and financial development, I found software programming exciting. Earlier this year, I quit my job and completed an intensive coding boot camp program. Now, I am looking for a software engineering opportunity to apply my new technical skill sets.
+              For the last few years, I explored different career paths and opportunities. I found that I had a stronger interest and desire to work in technology and software programming than I did in law and criminal justice. Not only did technology and software engineering provide better opportunities for personal and financial growth, but it also presented an opportunity to learn new skill sets, tackle different challenges, and work on projects that will impact many people. Earlier this year, I made the decision to pursue my desire to work as a software engineer. I quit my job, completed an intensive coding boot camp program, and focused my time and energy learning programming and engineering. 
+              <br />
+              <br />Now, I am looking for a software engineering opportunity to apply my new technical skill sets.
             </Typography>
           </Container>
         </Grid>
